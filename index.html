@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="app.css" />
     <script src="app.js"></script>
   </head>
-  <body>
-    <div class="header">
+  <body class="game">
+    <header class="title">
       <h1>Landscaper Game</h1>
-    </div>
+    </header>
+    <nav>
+      <li><a href="./market.html"> Super Market</a></li>
+    </nav>
     <div class="first-con">
       <h3>
         Congratulations on becoming a landscaper! You're financial adventure
@@ -24,13 +27,29 @@
       </p>
       <p>
         For now, you gotta chew your way to the big bucks! Get to work! Push the
-        button!
+        button! Hurry!
       </p>
       <form class="prompts">
         <button class="button" type="button" onclick="cutWithTeeth()">
           Work for $1
         </button>
       </form>
+    </div>
+    <header class="store-header">
+        <div class="mark-head">
+      <img src="./images/store-front.webp" alt="store-front" />
+    </div>
+   </header>
+    <br>
+    <div class="tool-cards">
+        <div class="card">
+            <img src="./images/rusty-scissors.jpg" alt="scissors">
+            <p>$5</p>
+            <button id="scissors" class="mark-but" type="button" onclick="buyScissors()">Purchase</button>
+        </div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
     </div>
   </body>
 </html>

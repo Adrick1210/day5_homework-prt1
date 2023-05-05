@@ -1,6 +1,30 @@
-body {
-  background-image: url("./images/landscape.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
+.game {
+    text-align: center;
+}
+
+.mark {
+   background-color: aquamarine;
+   text-align: center;
+}
+
+img {
+  height: 300px;
+  display: block;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+.mark-head {
+    background-image: url('./images/store-front.webg');
+    background-color: crimson;
+    margin-left: 675px;
+    margin-right: 675px;
+    border-radius: 25px;
+}
+
+.card img {
+    height: 200px;
+    width: 200px;
 }
