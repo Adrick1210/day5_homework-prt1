@@ -14,6 +14,10 @@ let tools = [
     type: "Push-Mower",
     pay: 50,
   },
+  {
+    type: "Battery-Mower",
+    pay: 100,
+  },
 ];
 
 // I set the money that the landscaper starts with
@@ -60,7 +64,7 @@ function cutWithPush() {
     alert(
       `Looks like with the ${tools[2].type}, your business is really booming! You earned $${money}!`
     );
-  } else if (newTool === "Push-Mower") {
+  } else if (newTool !== "Push-Mower") {
     alert(`I see you getting impatient again! Can't do much with $${money}..`);
   } else {
     alert(
@@ -87,7 +91,6 @@ function buyScissors() {
     alert(`You need more money to buy this.. get back to chewing!`);
   }
 }
-
 //I define a function that allows me to purchase the push mower
 function buyPushMow() {
   if (accountBal < 25) {
@@ -101,5 +104,26 @@ function buyPushMow() {
     alert(
       `You got yourself a ${tools[2].type}! You can now cut lawns for $${tools[2].pay} and with more ease!`
     );
-  } else `You need more money to buy this.. keep those clipping those hedges.`;
+  } else {
+    alert(
+      `You need more money to buy this.. keep those clipping those hedges.`
+    );
+  }
+}
+// I define a function that allows me to buy the battery powered mower
+function buyBatteryMower() {
+  if (accountBal < 250) {
+    alert(
+      `Sorry, You only have $${money}, that is not enough to purchase this item. Keep using ${tools[2].type}!`
+    );
+  } else if (accountBal >= 250) {
+    document.getElementById("battery");
+    accountBal.splice(1, 0, money);
+    newTool = tools[3].type;
+    alert(
+      `You got yourself a ${tools[3].type}! You can now cut lawns for ${tools[3].pay}!`
+    );
+  } else {
+    alert(`You need more money for this.. Keep up the grind!`);
+  }
 }
