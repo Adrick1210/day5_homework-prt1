@@ -1,4 +1,4 @@
-// console.log("Hello World!")
+// console.log("Let the games begin!!")
 
 // I set the tools for the landscaper to use
 let tools = [
@@ -72,6 +72,22 @@ function cutWithPush() {
     );
   }
 }
+// I define a function that uses the battery powered mower
+function cutWithBattery() {
+  if (money < 500 && newTool === "Battery-Mower") {
+    money += 100;
+    accountBal.splice(0, 1, money);
+    alert(
+      `Looks like with the ${tools[3].type}, your business is really soaring! You earned $${money}!`
+    );
+  } else if (newTool !== "Battery-Mower") {
+    alert(`So close, yet so far! You only have $${money}, keep up the hustle!`);
+  } else {
+    alert(
+      `You've earned the upgrade you deserve! Moving up in the world I see! Head to the market!`
+    );
+  }
+}
 
 // I define a function that allows me to purchase my tool
 let newTool = "";
@@ -118,7 +134,7 @@ function buyBatteryMower() {
     );
   } else if (accountBal >= 250) {
     document.getElementById("battery");
-    accountBal.splice(1, 0, money);
+    accountBal.splice(1, 0, (money -= 250));
     newTool = tools[3].type;
     alert(
       `You got yourself a ${tools[3].type}! You can now cut lawns for ${tools[3].pay}!`
