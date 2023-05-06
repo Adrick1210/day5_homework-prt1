@@ -9,10 +9,10 @@
     <script src="app.js"></script>
   </head>
   <body class="game">
-    <header class="title">
-      <h1>Landscaper Game</h1>
-    </header>
     <div class="first-con">
+      <header class="title">
+        <h1>Landscaper Game</h1>
+      </header>
       <h3>
         Congratulations on becoming a landscaper! You're financial adventure
         begins now!
@@ -28,10 +28,21 @@
       </p>
       <form class="prompts">
         <button class="button" type="button" onclick="cutWithTeeth()">
-          Work for $1
+          $1
         </button>
-        <button class="button" type="button" onclick="cutWithScissors()">Work for $5</button>
+        <button class="button" type="button" onclick="cutWithScissors()">
+          $5
+        </button>
+        <button class="button" type="button" onclick="">$50</button>
+        <button class="button">$100</button>
       </form>
+    </div>
+    <h1 id="upgrade-hint">To upgrade, please scroll down</h1>
+    <div id="arrow">
+      <img
+        src="https://freepngimg.com/save/133682-down-arrow-free-png-hq/512x512"
+        alt="down"
+      />
     </div>
     <div class="store-header">
       <div class="mark-head">
@@ -42,11 +53,11 @@
           <i>*A sign in the window*</i> -Don't ask for discounts, you won't get
           one..
         </h4>
-        <br>
+        <br />
       </div>
       <div class="tool-head">
-      <h1>Choose your tool!</h1>
-    </div>
+        <h1>Choose your tool!</h1>
+      </div>
     </div>
     <div class="tool-cards">
       <div class="card">
@@ -66,14 +77,12 @@
       <div class="card">
         <h2>Push-Mower</h2>
         <img src="./images/push-mow.jpg" alt="push-mow" />
-        <p>Better than rusty scissors... check with your doctor if you cut yourself with those...</p>
+        <p>
+          Better than rusty scissors... check with your doctor if you cut
+          yourself with those...
+        </p>
         <p>$25</p>
-        <button
-          id="push"
-          class="mark-but"
-          type="button"
-          onclick=""
-        >
+        <button id="push" class="mark-but" type="button" onclick="buyPushMow()">
           Purchase
         </button>
       </div>

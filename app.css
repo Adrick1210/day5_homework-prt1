@@ -1,6 +1,34 @@
+body {
+  background-color: aquamarine;
+}
+
 .game {
   text-align: center;
   margin-bottom: 90px;
+}
+
+.button {
+  margin-left: 25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  background-color: darkblue;
+  color: white;
+  border: none;
+  box-shadow: 6px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #04d9ff;
+  transition: 0.2s;
+}
+
+.prompts {
+  margin-top: 75px;
+  height: 75px;
+  text-align: center;
 }
 
 img {
@@ -18,17 +46,26 @@ img {
   margin-left: 675px;
   margin-right: 675px;
   border-radius: 25px;
+  margin-top: 550px;
+}
+
+#upgrade-hint {
+  margin-top: 100px;
+}
+
+#arrow {
+  margin-top: 100px;
 }
 
 .tool-head {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .tool-cards {
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-evenly;
-    gap: 2px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2px;
 }
 
 .card img {
@@ -37,19 +74,18 @@ img {
 }
 
 .card {
-    text-align: center;
-    border-radius: 15px;
-    width: 300px;
-    height: 500px;
-    box-shadow: 6px 8px 6px 8px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
-    background-color: aliceblue;
+  text-align: center;
+  border-radius: 15px;
+  width: 300px;
+  height: 500px;
+  box-shadow: 6px 8px 6px 8px rgba(0, 0, 0, 0.1);
+  background-color: aliceblue;
 }
 
 .card button {
-    height: 35px;
-    width: 100%;
-    border-radius: 5px;
-    color: white;
-    background-color: black;
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
 }

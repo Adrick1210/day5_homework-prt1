@@ -10,7 +10,10 @@ let tools = [
     type: "Rusty-Scissors",
     pay: 5,
   },
-  
+  {
+    type: "Push-Mower",
+    pay: 50,
+  },
 ];
 
 // I set the money that the landscaper starts with
@@ -67,4 +70,20 @@ function buyScissors() {
   } else {
     alert(`You need more money to buy this.. get back to chewing!`);
   }
+}
+
+//I define a function that allows me to purchase the push mower
+function buyPushMow() {
+  if (accountBal < 25) {
+    alert(
+      `Sorry, you only have $${money}, that is not enough to purchase this item. You need to keep using ${tools[1].name}!`
+    );
+  } else if (accountBal >= 25) {
+    document.getElementById("push");
+    accountBal.splice(0, 1, (money -= 25));
+    newTool = tools[2].type;
+    alert(
+      `You got yourself a ${tools[2].type}! You can now cut lawns for $${tools[2].pay} and with more ease!`
+    );
+  } else (`You need more money to buy this.. keep those clipping those hedges.`)
 }
