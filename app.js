@@ -52,6 +52,22 @@ function cutWithScissors() {
     );
   }
 }
+// I define a function that allows me to cut with the push mower
+function cutWithPush() {
+  if (money < 250 && newTool === "Push-Mower") {
+    money += 50;
+    accountBal.splice(0, 1, money);
+    alert(
+      `Looks like with the ${tools[2].type}, your business is really booming! You earned $${money}!`
+    );
+  } else if (newTool === "Push-Mower") {
+    alert(`I see you getting impatient again! Can't do much with $${money}..`);
+  } else {
+    alert(
+      `You've earned the upgrade you deserve! Moving up in the world I see! Head to the market!`
+    );
+  }
+}
 
 // I define a function that allows me to purchase my tool
 let newTool = "";
@@ -85,5 +101,5 @@ function buyPushMow() {
     alert(
       `You got yourself a ${tools[2].type}! You can now cut lawns for $${tools[2].pay} and with more ease!`
     );
-  } else (`You need more money to buy this.. keep those clipping those hedges.`)
+  } else `You need more money to buy this.. keep those clipping those hedges.`;
 }
