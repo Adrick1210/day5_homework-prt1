@@ -1,10 +1,6 @@
 .game {
-    text-align: center;
-}
-
-.mark {
-   background-color: aquamarine;
-   text-align: center;
+  text-align: center;
+  margin-bottom: 90px;
 }
 
 img {
@@ -17,14 +13,36 @@ img {
 }
 
 .mark-head {
-    background-image: url('./images/store-front.webg');
-    background-color: crimson;
-    margin-left: 675px;
-    margin-right: 675px;
-    border-radius: 25px;
+  background-image: url("./images/store-front.webg");
+  background-color: cadetblue;
+  margin-left: 675px;
+  margin-right: 675px;
+  border-radius: 25px;
+}
+
+.tool-cards {
+    margin-left: 15px;
+    margin-top: 100px;
 }
 
 .card img {
-    height: 200px;
-    width: 200px;
+  height: 300px;
+  width: 300px;
+}
+
+.card {
+    text-align: center;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 6px 8px 6px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    background-color: aliceblue;
+}
+
+.card button {
+    height: 35px;
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
 }

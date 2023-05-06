@@ -12,9 +12,6 @@
     <header class="title">
       <h1>Landscaper Game</h1>
     </header>
-    <nav>
-      <li><a href="./market.html"> Super Market</a></li>
-    </nav>
     <div class="first-con">
       <h3>
         Congratulations on becoming a landscaper! You're financial adventure
@@ -33,23 +30,38 @@
         <button class="button" type="button" onclick="cutWithTeeth()">
           Work for $1
         </button>
+        <button class="button" type="button" onclick="cutWithScissors()">Work for $5</button>
       </form>
     </div>
-    <header class="store-header">
-        <div class="mark-head">
-      <img src="./images/store-front.webp" alt="store-front" />
+    <div class="store-header">
+      <div class="mark-head">
+        <h1>Welcome to Florist Gump!</h1>
+        <img src="./images/store-front.webp" alt="store-front" />
+        <h2>It's your one-stop shop to a successful business!</h2>
+        <h4>
+          <i>*A sign in the window*</i> -Don't ask for discounts, you won't get
+          one..
+        </h4>
+        <br />
+      </div>
     </div>
-   </header>
-    <br>
     <div class="tool-cards">
-        <div class="card">
-            <img src="./images/rusty-scissors.jpg" alt="scissors">
-            <p>$5</p>
-            <button id="scissors" class="mark-but" type="button" onclick="buyScissors()">Purchase</button>
-        </div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
+      <div class="card">
+        <h2>Rusty-Scissors</h2>
+        <img src="./images/rusty-scissors.jpg" alt="scissors" />
+        <p>$5</p>
+        <button
+          id="scissors"
+          class="mark-but"
+          type="button"
+          onclick="buyScissors()"
+        >
+          Purchase
+        </button>
+      </div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
     </div>
   </body>
 </html>

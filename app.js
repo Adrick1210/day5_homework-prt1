@@ -7,9 +7,10 @@ let tools = [
     pay: 1,
   },
   {
-    type: "rusty scissors",
+    type: "Rusty-Scissors",
     pay: 5,
   },
+  
 ];
 
 // I set the money that the landscaper starts with
@@ -30,7 +31,26 @@ function cutWithTeeth() {
     );
   }
 }
+// I define the a function to cut with the scissors
+function cutWithScissors() {
+  if (money < 25 && newTool === "Rusty-Scissors") {
+    money += 5;
+    accountBal.splice(0, 1, money);
+    alert(
+      `A big pay raise came! You earned $${money} clipping away today! You got $${money} towards expansion!`
+    );
+  } else if (newTool !== "Rusty-Scissors") {
+    alert(
+      `Don't get ahead of yourself! Having $${money} is only good for half a stick of gum...`
+    );
+  } else {
+    alert(
+      `You've earned the upgrade you deserve! Moving up in the world I see! Head to the market!`
+    );
+  }
+}
 
+// I define a function that allows me to purchase my tool
 let newTool = "";
 function buyScissors() {
   if (accountBal < 5) {
@@ -45,6 +65,6 @@ function buyScissors() {
       `You got some ${tools[1].type}! You can now cut lawns for $${tools[1].pay}! Your dentist will thank you later!`
     );
   } else {
-    alert(`You need more money to buy this.. get back to chewing!`)
+    alert(`You need more money to buy this.. get back to chewing!`);
   }
 }
