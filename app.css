@@ -10,17 +10,59 @@
   margin-left: 50px;
   height: 50px;
   width: 50px;
-  border-radius: 10px;
+  border-radius: 25px;
   font-size: 1.2rem;
-  background-color: darkblue;
-  color: white;
   border: none;
   box-shadow: 4px 2px rgba(0, 0, 0, 0.3);
 }
 
-button:hover {
+#but-1 {
+  background-color: rgb(33, 33, 206);
+}
+
+#but-1:hover {
   cursor: pointer;
-  background-color: #04d9ff;
+  background-color: blue;
+  transition: 0.2s;
+}
+
+#but-2 {
+  background-color: rgb(205, 26, 26);
+}
+
+#but-2:hover {
+  cursor: pointer;
+  background-color: #F72119;
+  transition: 0.2s;
+}
+
+#but-3 {
+  background-color: rgb(5, 141, 5);
+}
+
+#but-3:hover {
+  cursor: pointer;
+  background-color: #24bb10;
+  transition: 0.2s;
+}
+
+#but-4 {
+  background-color: rgb(214, 214, 20);
+}
+
+#but-4:hover {
+  cursor: pointer;
+  background-color: #f4f40a;
+  transition: 0.2s;
+}
+
+#but-5 {
+  background-color: rgb(217, 148, 20);
+}
+
+#but-5:hover {
+  cursor: pointer;
+  background-color: #f69606;
   transition: 0.2s;
 }
 
