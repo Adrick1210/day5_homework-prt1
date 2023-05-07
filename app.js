@@ -26,13 +26,11 @@ let tools = [
 
 // I set the money that the landscaper starts with
 let money = 0;
-let accountBal = [];
 
 // I define the function to add one dollar to cut with teeth
 function cutWithTeeth() {
   if (money < 5) {
     money += 1;
-    console.log(money);
     alert(
       `You did it! You earned $${money} cutting lawns today! You got a jaw that won't quit! You now have $${money}`
     );
@@ -46,7 +44,6 @@ function cutWithTeeth() {
 function cutWithScissors() {
   if (money < 25 && newTool === "Rusty-Scissors") {
     money += 5;
-    console.log(money);
     alert(
       `A big pay raise came! You earned $${money} clipping away today! You got $${money} towards expansion!`
     );
@@ -64,7 +61,6 @@ function cutWithScissors() {
 function cutWithPush() {
   if (money < 250 && newTool === "Push-Mower") {
     money += 50;
-    console.log(money);
     alert(
       `Looks like with the ${tools[2].type}, your business is really booming! You earned $${money}!`
     );
@@ -80,7 +76,6 @@ function cutWithPush() {
 function cutWithBattery() {
   if (money < 500 && newTool === "Battery-Mower") {
     money += 100;
-    console.log(money);
     alert(
       `Looks like with the ${tools[3].type}, your business is really soaring! You earned $${money}!`
     );
@@ -96,7 +91,6 @@ function cutWithBattery() {
 function useStudents() {
   if (money < 1000 && newTool === "Starving-Students") {
     money += 250;
-    console.log(money);
     alert(
       `Wow, the ${tools[4].type} and you are rocking out these lawns! By the end of the day you'll be a $1000-aire!`
     );
