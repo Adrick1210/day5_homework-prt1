@@ -32,7 +32,7 @@ let accountBal = [];
 function cutWithTeeth() {
   if (money < 5) {
     money += 1;
-    accountBal.splice(0, 1, money);
+    console.log(money);
     alert(
       `You did it! You earned $${money} cutting lawns today! You got a jaw that won't quit! You now have $${money}`
     );
@@ -46,7 +46,7 @@ function cutWithTeeth() {
 function cutWithScissors() {
   if (money < 25 && newTool === "Rusty-Scissors") {
     money += 5;
-    accountBal.splice(0, 1, money);
+    console.log(money);
     alert(
       `A big pay raise came! You earned $${money} clipping away today! You got $${money} towards expansion!`
     );
@@ -64,7 +64,7 @@ function cutWithScissors() {
 function cutWithPush() {
   if (money < 250 && newTool === "Push-Mower") {
     money += 50;
-    accountBal.splice(0, 1, money);
+    console.log(money);
     alert(
       `Looks like with the ${tools[2].type}, your business is really booming! You earned $${money}!`
     );
@@ -80,7 +80,7 @@ function cutWithPush() {
 function cutWithBattery() {
   if (money < 500 && newTool === "Battery-Mower") {
     money += 100;
-    accountBal.splice(0, 1, money);
+    console.log(money);
     alert(
       `Looks like with the ${tools[3].type}, your business is really soaring! You earned $${money}!`
     );
@@ -96,7 +96,7 @@ function cutWithBattery() {
 function useStudents() {
   if (money < 1000 && newTool === "Starving-Students") {
     money += 250;
-    accountBal.splice(0, 1, money);
+    console.log(money);
     alert(
       `Wow, the ${tools[4].type} and you are rocking out these lawns! By the end of the day you'll be a $1000-aire!`
     );
@@ -104,23 +104,23 @@ function useStudents() {
     alert(
       `Looks like you gotta keep up the solo act. Don't let the summer heat beat you!`
     );
-  } else (money >= 1000) ;
+  } else if (money >= 1000) {
     alert(
       `You've reached $${money}! Time to pay the $${tools[4].type} and pack it up for the day! You win the game!`
     );
   }
-
+}
 
 // I define a function that allows me to purchase my tool
 let newTool = "";
 function buyScissors() {
-  if (accountBal < 5) {
+  if (money < 5) {
     alert(
       `Sorry you only have $${money}, that's not enough to purchase this item. Get back to using those ${tools[0].type}!`
     );
-  } else if (accountBal >= 5) {
+  } else if (money >= 5) {
     document.getElementById("scissors");
-    accountBal.splice(0, 1, (money -= 5));
+    money -= 5;
     newTool = tools[1].type;
     alert(
       `You got some ${tools[1].type}! You can now cut lawns for $${tools[1].pay}! Your dentist will thank you later!`
@@ -131,13 +131,13 @@ function buyScissors() {
 }
 //I define a function that allows me to purchase the push mower
 function buyPushMow() {
-  if (accountBal < 25) {
+  if (money < 25) {
     alert(
       `Sorry, you only have $${money}, that is not enough to purchase this item. You need to keep using ${tools[1].name}!`
     );
-  } else if (accountBal >= 25) {
+  } else if (money >= 25) {
     document.getElementById("push");
-    accountBal.splice(0, 1, (money -= 25));
+    money -= 25;
     newTool = tools[2].type;
     alert(
       `You got yourself a ${tools[2].type}! You can now cut lawns for $${tools[2].pay} and with more ease!`
@@ -150,13 +150,13 @@ function buyPushMow() {
 }
 // I define a function that allows me to buy the battery powered mower
 function buyBatteryMower() {
-  if (accountBal < 250) {
+  if (money < 250) {
     alert(
       `Sorry, You only have $${money}, that is not enough to purchase this item. Keep using ${tools[2].type}!`
     );
-  } else if (accountBal >= 250) {
+  } else if (money >= 250) {
     document.getElementById("battery");
-    accountBal.splice(1, 0, (money -= 250));
+    money -= 250;
     newTool = tools[3].type;
     alert(
       `You got yourself a ${tools[3].type}! You can now cut lawns for ${tools[3].pay}!`
@@ -167,16 +167,16 @@ function buyBatteryMower() {
 }
 // I define a function to purchase a team of starving students
 function hireStarvingStudents() {
-  if (accountBal < 500) {
+  if (money < 500) {
     alert(
       `Sorry, you only have $${money}, You won't be able to hire a team of hungry students! Keep using ${tools[3].type}!`
     );
-  } else if (accountBal >= 500) {
+  } else if (money >= 500) {
     document.getElementById("students");
-    accountBal.splice(1, 0, (money -= 500));
+    money -= 500;
     newTool = tools[4].type;
     alert(
       `You got yourself a team of ${tools[4].type}! Now productivity can go up and cuts will cost $${tools[4].pay}!`
     );
-  } 
-};
+  }
+}
