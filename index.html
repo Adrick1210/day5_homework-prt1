@@ -36,7 +36,12 @@
         <button class="button" type="button" onclick="cutWithPush()">
           $50
         </button>
-        <button class="button" type="button" onclick="cutWithBattery()">$100</button>
+        <button class="button" type="button" onclick="cutWithBattery()">
+          $100
+        </button>
+        <button class="button" type="button" onclick="useStudents()">
+          $250
+        </button>
       </form>
     </div>
     <h1 id="upgrade-hint">To upgrade, please scroll down</h1>
@@ -88,16 +93,37 @@
           Purchase
         </button>
       </div>
-      <div class="card"><h2>Battery Powered Mower</h2>
+      <div class="card">
+        <h2>Battery Powered Mower</h2>
         <img src="./images/battery-pow.jpg" alt="gas-mow" />
-        <p>
-          Business is really looking up with this bad boy!
-        </p>
+        <p>Business is really looking up with this bad boy!</p>
         <p>$250</p>
-        <button id="battery" class="mark-but" type="button" onclick="buyBatteryMower()">
+        <button
+          id="battery"
+          class="mark-but"
+          type="button"
+          onclick="buyBatteryMower()"
+        >
           Purchase
-        </button></div>
-      <div class="card"></div>
+        </button>
+      </div>
+      <div class="card">
+        <h2>Starving College Students</h2>
+        <img src="./images/Zach.jpg" alt="gas-mow" />
+        <p>
+          Times have been tough for Teddy Sanders and Delta Psi Beta! They need
+          a some work!
+        </p>
+        <p>$500</p>
+        <button
+          id="students"
+          class="mark-but"
+          type="button"
+          onclick="hireStarvingStudents()"
+        >
+          Purchase
+        </button>
+      </div>
     </div>
   </body>
 </html>

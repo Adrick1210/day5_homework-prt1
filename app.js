@@ -18,6 +18,10 @@ let tools = [
     type: "Battery-Mower",
     pay: 100,
   },
+  {
+    type: "Starving-Students",
+    pay: 250,
+  },
 ];
 
 // I set the money that the landscaper starts with
@@ -88,6 +92,24 @@ function cutWithBattery() {
     );
   }
 }
+//I define a function that uses the students to cut lawns
+function useStudents() {
+  if (money < 1000 && newTool === "Starving-Students") {
+    money += 250;
+    accountBal.splice(0, 1, money);
+    alert(
+      `Wow, the ${tools[4].type} and you are rocking out these lawns! By the end of the day you'll be a $1000-aire!`
+    );
+  } else if (newTool !== "Starving-Students") {
+    alert(
+      `Looks like you gotta keep up the solo act. Don't let the summer heat beat you!`
+    );
+  } else (money >= 1000) ;
+    alert(
+      `You've reached $${money}! Time to pay the $${tools[4].type} and pack it up for the day! You win the game!`
+    );
+  }
+
 
 // I define a function that allows me to purchase my tool
 let newTool = "";
@@ -143,3 +165,18 @@ function buyBatteryMower() {
     alert(`You need more money for this.. Keep up the grind!`);
   }
 }
+// I define a function to purchase a team of starving students
+function hireStarvingStudents() {
+  if (accountBal < 500) {
+    alert(
+      `Sorry, you only have $${money}, You won't be able to hire a team of hungry students! Keep using ${tools[3].type}!`
+    );
+  } else if (accountBal >= 500) {
+    document.getElementById("students");
+    accountBal.splice(1, 0, (money -= 500));
+    newTool = tools[4].type;
+    alert(
+      `You got yourself a team of ${tools[4].type}! Now productivity can go up and cuts will cost $${tools[4].pay}!`
+    );
+  } 
+};
